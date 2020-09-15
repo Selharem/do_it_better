@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:do_it_better/app.dart';
-import 'package:do_it_better/bottom_navigation.dart';
-import 'package:do_it_better/Page1.dart';
-import 'package:do_it_better/Page2.dart';
-import 'package:do_it_better/Page3.dart';
+import 'package:do_it_better/helper/app.dart';
+import 'package:do_it_better/helper/bottom_navigation.dart';
+import 'package:do_it_better/screens/Page1.dart';
+import 'package:do_it_better/screens/Page2.dart';
+import 'package:do_it_better/screens/Page3.dart';
 
 class TabNavigatorRoutes {
   static const String root = '/';

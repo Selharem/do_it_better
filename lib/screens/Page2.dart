@@ -1,3 +1,4 @@
+import 'package:do_it_better/helper/drawer_navigation.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatelessWidget {
@@ -10,6 +11,7 @@ class Page2 extends StatelessWidget {
         title: Text("Page 2"),
         
       ),
+      drawer: DrawerNavigaton(),
       ));
   }
 }
