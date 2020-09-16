@@ -1,10 +1,8 @@
-import 'package:do_it_better/screens/Page1.dart';
-import 'package:do_it_better/screens/Page3.dart';
 import 'package:flutter/material.dart';
 import 'package:do_it_better/screens/categories_screen.dart';
-// import 'package:fluttertodolistsqfliteapp/screens/home_screen.dart';
-// import 'package:fluttertodolistsqfliteapp/screens/todos_by_category.dart';
-// import 'package:fluttertodolistsqfliteapp/services/category_service.dart';Accumulator
+import 'package:do_it_better/screens/home_screen.dart';
+import 'package:do_it_better/screens/todos_by_category.dart';
+import 'package:do_it_better/services/category_service.dart';
 
 class DrawerNavigaton extends StatefulWidget {
   @override
@@ -14,9 +12,9 @@ class DrawerNavigaton extends StatefulWidget {
 class _DrawerNavigatonState extends State<DrawerNavigaton> {
   List<Widget> _categoryList = List<Widget>();
 
-  //CategoryService _categoryService = CategoryService();
+  CategoryService _categoryService = CategoryService();
 
-  /*@override
+  @override
   initState() {
     super.initState();
     getAllCategories();
@@ -28,17 +26,17 @@ class _DrawerNavigatonState extends State<DrawerNavigaton> {
     categories.forEach((category) {
       setState(() {
         _categoryList.add(InkWell(
-          /*onTap: () => Navigator.push(
+          onTap: () => Navigator.push(
               context,
               new MaterialPageRoute(
-                  builder: (context) => new TodosByCategory(category: category['name'],))),*/
+                  builder: (context) => new TodosByCategory(category: category['name'],))),
           child: ListTile(
             title: Text(category['name']),
           ),
         ));
       });
     });
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +57,7 @@ class _DrawerNavigatonState extends State<DrawerNavigaton> {
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Page1())),
+                  .push(MaterialPageRoute(builder: (context) => HomeScreen())),
             ),
             ListTile(
               leading: Icon(Icons.view_list),
